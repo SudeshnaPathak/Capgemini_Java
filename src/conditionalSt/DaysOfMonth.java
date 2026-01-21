@@ -1,10 +1,10 @@
-package swebatch;
+package conditionalSt;
 
 public class DaysOfMonth {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//Days of Month : In order to print days of feb check where year is laep year or not 
+		
+		//Days of Month : In order to print days of feb check where year is leap year or not 
 		int y = 2004;
 		int month = 2;
 		

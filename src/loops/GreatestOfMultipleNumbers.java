@@ -1,10 +1,10 @@
-package swebatch;
+package loops;
 
 import java.util.Scanner;
 public class GreatestOfMultipleNumbers {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		int n = 0;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter -1 to Discontinue");

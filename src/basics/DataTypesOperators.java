@@ -1,6 +1,6 @@
-package swebatch;
+package basics;
 
-public class PathSala {
+public class DataTypesOperators {
 
 	public static void main(String[] args) {
 		int a = 10;
