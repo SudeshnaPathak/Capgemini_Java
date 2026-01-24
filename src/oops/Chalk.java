@@ -1,10 +1,11 @@
 package oops;
 
 class Chalk1{
-	String brand;
+	static String brand;
 	int length;
 	String color;
-	
+	static final float width = 10; //Constant value inside class static area
+	static double price = 20.0;
 	//non parameterized constructor ---> STATIC INITIALIZATION
 	//	Chalk1(){
 	//		brand = "Camels";
@@ -22,19 +23,21 @@ class Chalk1{
 	//	}
 	
 	//CONSTRUCTOR OVERLOADING
-	Chalk1(){
+	protected Chalk1(){
 		return; //We can use return statement inside constructor, although no specific need
 	}
 	
 	Chalk1(String brand)
 	{
-		this.brand = brand;
+		Chalk1.brand = brand; //INITIALIZING STATIC VARIABLE 
 	}
 	
 	Chalk1(String brand , String color)
 	{
 		this.brand = brand;
 		this.color = color;
+		this.price = 15; // STATIC variables can be re-initialized inside a constructor
+//		this.width = 5; //FINAL variables cannot be re-initialized
 		return;
 	}
 	
@@ -73,13 +76,20 @@ public class Chalk {
 		 
 		 Chalk1 c3 = new Chalk1("Camels" , 15 , "yellow"); 
 		 Chalk1 c4 = new Chalk1("Doms" , 12 , "Green");
-		 System.out.println(c3.brand);
-		 System.out.println(c4.color);
+		 System.out.println(c3.brand); //DOMS
+		 System.out.println(c4.color); //GREEN
 		 
 		 Chalk1 c5 = new Chalk1("Camels" , 15);
 		 System.out.println(c5.length);
+	
 		 Chalk1 c6 = new Chalk1(30 , "pink");
 		 System.out.println(c6.color);
+		 System.out.println(c6.width);
+		 System.out.println(c6.price);
+		 
+		 Chalk1 c7 = new Chalk1("Apsara" , "blue");
+		 System.out.println(c7.price);
+		 System.out.println(c6.price);
 	}
 
 }
