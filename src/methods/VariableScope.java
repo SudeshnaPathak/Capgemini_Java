@@ -15,7 +15,7 @@ public class VariableScope {
  		
 //		boolean a = true; //ERROR : TWO LOCAL SCOPE VARIABLES CANNOT HAVE SAME NAME
  		
- 		System.out.println(b); //GLOBAL SCOPE STATIC VARIABLE CAN BE USED WITHOUT INITIALIZATION, AS COMPILER assumes default value
+ 		System.out.println(b); //GLOBAL SCOPE STATIC VARIABLE CAN BE USED WITHOUT INITIALIZATION, AS JVM assumes default value
  		
  		int c;
 // 		System.out.println(c); //LOCAL SCOPE VARIABLE CANNOT BE ACCESSED WITHOUT INITIALIZATION
@@ -25,7 +25,7 @@ public class VariableScope {
  		//float , double -> 0.0
  		//boolean -> false
  		//character -> ''
- 		//All non primitive datatype -> null
+ 		//All non primitive datatypes -> null
 	}
 
 }

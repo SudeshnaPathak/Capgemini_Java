@@ -8,6 +8,7 @@ public class AreaOfParallelogram {
 		return b * h;
 	}
 	
+	//VOID RETURN TYPE
 	public static void demo(byte a , byte b) //FORMAL ARGUMENTS/PARAMETERS
 	{
 		System.out.println("Sum:" + (a+b));
@@ -34,11 +35,11 @@ public class AreaOfParallelogram {
 		//short + byte = int
 		//short + int = int
 		//short + short = int
-		//int + byte = byte
+		//int + byte = int
 		//int + int = int
 		//int + long = long
 		
-		demo1(10 , true); //ORDER AND FORMAL AND ACTUAL ARGUMENT SHOULD BE SAME
+		demo1(10 , true); //ORDER OF FORMAL AND ACTUAL ARGUMENT SHOULD BE SAME
 	}
 
 }
