@@ -1,61 +1,112 @@
 package oops;
 
-class Insta{
-	String userid;
+class Insta
+{
+	String userId;
 	String password;
 	int age;
-	String fullname;
-	
-	Insta(){
-		this("ABC@123");
-	}
-	
-	Insta(String userid){
-		this(userid , "12345678");
-		this.userid = userid;
-	}
-	
-	Insta(long phonenumber)
+	String fullName;
+	Insta()
 	{
-		String ph = Long.toString(phonenumber);		
-		this(ph , "12345678");
-		if(ph.length() == 10)this.userid = ph;
-		else this.userid = null;
+		this("ABC@123" , "12345678" , 18 , "Unknown User");
 	}
 	
-	Insta(String userid , String password)
+	//userId/email
+	Insta(String userId)
 	{
-		this(userid , password , 18);
-		this.userid = userid;
-		this.password = password;
+		this(validateUserId(userId) , "12345678" , 18 , "Unknown User");
 	}
 	
-	Insta(String userid , String password , int age)
+	//phone number
+	Insta(long phoneNumber)
 	{
-		this(userid , password , age , "Unknown User");
-		this.userid = userid;
-		this.password = password;
-		this.age = age;
+		this(validatePh(phoneNumber) , "12345678" , 18 , "Unknown User");
 	}
 	
-	Insta(String userid , String password , int age , String fullname)
+	//userId + password
+	Insta(String userId , String password)
 	{
-		this.userid = userid;
+		this(validateUserId(userId) , password , 18 , "Unknown User");
+	}
+	
+	//userId + password + age
+	Insta(String userId , String password , int age)
+	{
+		this(validateUserId(userId) , password , age , "Unknown User");
+	}
+	
+	//userId + password + age + fullName
+	Insta(String userId , String password , int age , String fullName)
+	{
+		this.userId = userId;
 		this.password = password;
 		this.age = age;
-		this.fullname = fullname;
+		this.fullName = fullName;
 	}
 	
+	public static String validateUserId(String userId)
+	{
+		return userId.length() >= 3 ? userId : null;
+	}
+	
+	public static String validatePh(long phoneNumber)
+	{
+		String ph = Long.toString(phoneNumber);
+		return ph.length() == 10 ? ph : null;
+	}
 }
-public class Instagram {
 
-	public static void main(String[] args) {
-		Insta i1 = new Insta(88252158l);
-		System.out.println(i1.userid);
+public class Instagram
+{
+	public static void main(String[] args)
+	{
+		Insta i1 = new Insta();
+		System.out.println(i1.userId);
 		System.out.println(i1.password);
 		System.out.println(i1.age);
-		System.out.println(i1.fullname);
-
+		System.out.println(i1.fullName);
+		
+		Insta i2 = new Insta("sudeshna__p");
+		System.out.println(i2.userId);
+		System.out.println(i2.password);
+		System.out.println(i2.age);
+		System.out.println(i2.fullName);
+		
+		Insta i3 = new Insta(8825250158l);
+		System.out.println(i3.userId);
+		System.out.println(i3.password);
+		System.out.println(i3.age);
+		System.out.println(i3.fullName);
+		
+		Insta i4 = new Insta(8820158l);
+		System.out.println(i4.userId);
+		System.out.println(i4.password);
+		System.out.println(i4.age);
+		System.out.println(i4.fullName);
+		
+		Insta i5 = new Insta("sudeshna__p" , "Sudeshna@123");
+		System.out.println(i5.userId);
+		System.out.println(i5.password);
+		System.out.println(i5.age);
+		System.out.println(i5.fullName);
+		
+		Insta i6 = new Insta("sudeshna__p" , "Sudeshna@123" , 22);
+		System.out.println(i6.userId);
+		System.out.println(i6.password);
+		System.out.println(i6.age);
+		System.out.println(i6.fullName);
+		
+		Insta i7 = new Insta("pathaksudeshna92@gmail.com");
+		System.out.println(i7.userId);
+		System.out.println(i7.password);
+		System.out.println(i7.age);
+		System.out.println(i7.fullName);
+		
+		Insta i8 = new Insta("sudeshna__p" , "Sudeshna@123" , 22 , "Sudeshna Pathak");
+		System.out.println(i8.userId);
+		System.out.println(i8.password);
+		System.out.println(i8.age);
+		System.out.println(i8.fullName);
+		
 	}
-
 }
