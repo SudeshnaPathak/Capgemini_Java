@@ -23,22 +23,43 @@ class Insta
 		this(validatePh(phoneNumber) , "12345678" , 18 , "Unknown User");
 	}
 	
-	//userId + password
+	//userId/email + password
 	Insta(String userId , String password)
 	{
 		this(validateUserId(userId) , password , 18 , "Unknown User");
 	}
 	
-	//userId + password + age
+	//phoneNumber + password
+	Insta(long phoneNumber , String password)
+	{
+		this(validatePh(phoneNumber) , password , 18 , "Unknown User");
+	}
+	
+	//userId/email + password + age
 	Insta(String userId , String password , int age)
 	{
 		this(validateUserId(userId) , password , age , "Unknown User");
 	}
 	
-	//userId + password + age + fullName
+	//phoneNumber + password + age
+	Insta(long phoneNumber , String password , int age)
+	{
+		this(validatePh(phoneNumber) , password , age , "Unknown User");
+	}
+	
+	//userId/email + password + age + fullName
 	Insta(String userId , String password , int age , String fullName)
 	{
-		this.userId = userId;
+		this.userId = validateUserId(userId);
+		this.password = password;
+		this.age = age;
+		this.fullName = fullName;
+	}
+	
+	//phoneNumber + password + age + fullName
+	Insta(long phoneNumber , String password , int age , String fullName)
+	{
+		this.userId = validatePh(phoneNumber);
 		this.password = password;
 		this.age = age;
 		this.fullName = fullName;
@@ -46,6 +67,7 @@ class Insta
 	
 	public static String validateUserId(String userId)
 	{
+		if(userId == null) return null;
 		return userId.length() >= 3 ? userId : null;
 	}
 	

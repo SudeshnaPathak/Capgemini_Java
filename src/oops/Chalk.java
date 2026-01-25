@@ -1,7 +1,7 @@
 package oops;
 
 class Chalk1{
-	static String brand;
+	String brand;
 	int length;
 	String color;
 	static final float width = 10; //Constant value inside class static area
@@ -29,7 +29,7 @@ class Chalk1{
 	
 	Chalk1(String brand)
 	{
-		Chalk1.brand = brand; //INITIALIZING STATIC VARIABLE 
+		this.brand = brand; 
 	}
 	
 	Chalk1(String brand , String color)
@@ -76,8 +76,8 @@ public class Chalk {
 		 
 		 Chalk1 c3 = new Chalk1("Camels" , 15 , "yellow"); 
 		 Chalk1 c4 = new Chalk1("Doms" , 12 , "Green");
-		 System.out.println(c3.brand); //DOMS
-		 System.out.println(c4.color); //GREEN
+		 System.out.println(c3.brand); 
+		 System.out.println(c4.color); 
 		 
 		 Chalk1 c5 = new Chalk1("Camels" , 15);
 		 System.out.println(c5.length);
@@ -90,6 +90,10 @@ public class Chalk {
 		 Chalk1 c7 = new Chalk1("Apsara" , "blue");
 		 System.out.println(c7.price);
 		 System.out.println(c6.price);
+		 
+//		 We can re-initialize static variable inside a constructor, However, using final static which
+//		 prevents re-initialization by assigning a shared memory for all objects
+//		 inside static pool
 	}
 
 }
