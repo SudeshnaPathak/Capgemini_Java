@@ -37,7 +37,7 @@ class Chalk1{
 		this.brand = brand;
 		this.color = color;
 		this.price = 15; // STATIC variables can be re-initialized inside a constructor
-//		this.width = 5; //FINAL variables cannot be re-initialized
+//		this.width = 5; //Static final variables cannot be re-initialized
 		return;
 	}
 	
