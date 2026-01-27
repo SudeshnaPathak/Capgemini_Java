@@ -13,7 +13,7 @@ public class Specialization {
 		
 		Par p = new Chld();
 		System.out.println(p.a);
-//		System.out.println(p.b); //COMPILE TIME ERROR --> Object reference variable is of Parent Type
+//		System.out.println(p.b); //COMPILE TIME ERROR --> Object reference variable is of Parent Type, Parent type reference cannot access child class property
 		
 		Chld c = (Chld)p;
 		System.out.println(c.a);

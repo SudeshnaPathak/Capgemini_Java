@@ -11,7 +11,7 @@ class Pa{
 //IsA Relationship
 class Ch extends Pa{
 	int b = 20;
-	
+	int a = 30;
 	public void access()
 	{
 		System.out.println(this.a); //this: Priority to same class variable

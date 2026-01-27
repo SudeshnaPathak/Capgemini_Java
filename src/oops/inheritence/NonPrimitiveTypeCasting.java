@@ -28,18 +28,18 @@ public class NonPrimitiveTypeCasting {
 		Prt p2 = new Prt();
         //Cld c2 = (Cld)p2; ---> ClassCastException
 		
-		System.out.println(p2 instanceof Cld);
-		System.out.println(p2 instanceof Prt);
-		System.out.println(p instanceof Prt);
-		System.out.println(p instanceof Cld);
-		System.out.println(c instanceof Prt);
-		System.out.println(c instanceof Cld);
+		System.out.println(p2 instanceof Cld); //false
+		System.out.println(p2 instanceof Prt); //true
+		System.out.println(p instanceof Prt); //true --> child class inherits the properties of parent class, so it also treated as parent class instance
+		System.out.println(p instanceof Cld); //true
+		System.out.println(c instanceof Prt); //true 
+		System.out.println(c instanceof Cld); //true
 		
 		//AVOID ClassCastException using instanceof operators
-		Cld cd = null;
+		Cld c2 = null;
 		if(p2 instanceof Cld)
 		{
-			cd = (Cld)p2;
+			c2 = (Cld)p2;
 			System.out.println("Down Casting");
 		}
 		System.out.println("Main Ends");

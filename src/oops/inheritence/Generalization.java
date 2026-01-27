@@ -36,8 +36,8 @@ public class Generalization {
 	public static void main(String[] args) {
 		//Generalized object of RelianceDigital to store every other object
 		//We perform up-casting to achieve Generalization
-		RelianceDigital rd = new Laptops();
-		RelianceDigital rd1 = new Hometheatre();
+		RelianceDigital rd = new Laptops(); //up-casting
+		RelianceDigital rd1 = new Hometheatre(); //up-casting
 	}
 
 }

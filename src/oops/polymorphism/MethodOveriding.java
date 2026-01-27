@@ -25,7 +25,7 @@ public class MethodOveriding {
 		
 		//Method Overiding->Dynamic Method Dispatch
 		//Compiler performs Compile Time Binding to Parent class
-		//JVM performs binding during Run Time to Child class
+		//JVM performs Run Time binding to Child class
 		Parent1 p1 = new Child();
 		p1.shaadi(); //Leela
 		Child c1 = (Child)p1;
