@@ -5,7 +5,7 @@ public interface Bank {
 	void withdraw();
 	void fundTransfer();
 	void checkBalance();
-	void resetPassword();
+	void resetPassword(String password);
 	void loan();
 	void fixedDeposit();
 }

@@ -19,7 +19,7 @@ public class useBank implements Bank{
 		System.out.println("Check your Current Balance");
 	}
 	
-	public void resetPassword() {
+	public void resetPassword(String password) {
 		System.out.println("Reset Password");
 	}
 	
