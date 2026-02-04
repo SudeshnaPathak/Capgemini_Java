@@ -1,5 +1,7 @@
 package customExceptions;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PasswordValidation {
 
@@ -12,7 +14,7 @@ public class PasswordValidation {
 			check_password(password);
 		}
 		catch(Exception e){
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		sc.close();
 	}
@@ -21,6 +23,11 @@ public class PasswordValidation {
 	{
 		char p[] = password.toCharArray();
 		int uc = 0 , lc = 0 , d = 0 , special = 0 , space = 0;
+		Pattern pt = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$^&+_*()])(?=\\S+$).{8,20}$");
+		Matcher m = pt.matcher(password);
+		if(m.matches()) System.out.println("Valid Password");
+		else throw new InvalidPasswordException("Invalid Password Format.");
+		
 		for(char c : p)
 		{
 			if(Character.isUpperCase(c)) uc++;

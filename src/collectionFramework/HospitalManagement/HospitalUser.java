@@ -1,17 +1,21 @@
-package collectionFramework.UEMBank;
+package collectionFramework.HospitalManagement;
+import java.io.Serializable;
 
-public abstract class Account {
+public class HospitalUser implements Serializable{
 	private String fullName;
 	private String emailId;
 	private long phoneNumber;
 	private String address;
+	private char gender;
+	private int age;
 	
-	
-	public Account(String fullName, String emailId, long phoneNumber, String address) {
+	public HospitalUser(String fullName, String emailId, long phoneNumber, String address, char gender, int age) {
 		this.fullName = fullName;
 		this.emailId = emailId;
 		this.phoneNumber = phoneNumber;
 		this.address = address;
+		this.gender = gender;
+		this.age = age;
 	}
 
 	public String getFullName() {
@@ -45,16 +49,29 @@ public abstract class Account {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	public abstract boolean withdraw(double amount);
-	public abstract void deposit(double ammount);
-	public abstract void checkBalance();
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 
 	@Override
 	public String toString() {
-		return "Account [fullName=" + fullName + ", emailId=" + emailId + ", phoneNumber=" + phoneNumber + ", address="
-				+ address + "]";
+		return "HospitalUser [fullName=" + fullName + ", emailId=" + emailId + ", phoneNumber=" + phoneNumber
+				+ ", address=" + address + ", gender=" + gender + ", age=" + age + "]";
 	}
+	
 	
 	
 }
